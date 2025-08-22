@@ -19,6 +19,7 @@ CORS(app, origins="*")
 # Register blueprints
 app.register_blueprint(user_bp, url_prefix='/api')
 app.register_blueprint(onlyfans_crm_bp, url_prefix='/api/crm')
+app.register_blueprint(auth_bp, url_prefix='/api/auth')
 
 # Database configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(os.path.dirname(__file__), 'database', 'app.db')}"
